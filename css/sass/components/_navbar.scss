@@ -1,0 +1,29 @@
+.nav-cont {
+    background-color: $main;
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.mo-navbar {
+    display: flex;
+    margin-right: 32px;
+}
+
+.nav-li {
+    margin-left: 22px;
+}
+
+.nav-anchor {
+    font-size: 16px;
+    color: #fff;
+    font-family: med;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: $orange;
+    }
+}

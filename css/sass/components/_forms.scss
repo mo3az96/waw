@@ -1,0 +1,158 @@
+.search-cont {
+    position: relative;
+    height: 50px;
+    width: 556px;
+
+    &:after {
+        content: "";
+        height: 34px;
+        width: 2px;
+        background-color: $border;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        right: 232px;
+
+        #{$ltr} & {
+            right: auto;
+            left: 232px;
+        }
+    }
+}
+
+.search-button {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    background-color: $orange;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        background-color: $main;
+    }
+}
+
+#{$ltr} .search-button {
+    left: auto;
+    right: 8px;
+}
+
+.search-input {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+    padding-right: 250px;
+    border-radius: 50px;
+    font-size: 14px;
+    text-align: right;
+    color: $text;
+    @include transition(all 0.3s ease-in-out);
+
+    border: 2px solid $border;
+
+    &::placeholder {
+        text-align: right;
+        color: #bbbbbb;
+        font-size: 14px;
+    }
+
+    &:focus {
+        border: 2px solid $orange;
+    }
+}
+
+#{$ltr} .search-input {
+    padding-left: 250px;
+    padding-right: 40px;
+    text-align: left;
+
+    &::placeholder {
+        text-align: left;
+    }
+}
+
+//////////////news///////////////
+
+.newsletter-cont {
+    position: relative;
+}
+
+.newsletter-input {
+    background-color: #fff;
+    width: 100%;
+    height: 45px;
+    border-radius: 45px;
+    padding: 0 30px;
+    font-size: 15px;
+    text-align: right;
+    color: $text;
+    border: 2px solid #ebebeb;
+    @include transition(all 0.3s ease-in-out);
+
+    &::placeholder {
+        text-align: right;
+        font-size: 14px;
+        color: #bbbbbb;
+    }
+
+    &:focus {
+        border-color: $orange;
+
+    }
+
+
+}
+
+
+#{$ltr} .newsletter-input {
+    text-align: left;
+
+    &::placeholder {
+        text-align: left;
+    }
+}
+
+.newsletter-button {
+    position: absolute;
+    left: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include transition(all 0.3s ease-in-out);
+    border-radius: 50%;
+    border: none;
+    color: $text;
+    background-color: transparent;
+
+    &:after {
+        content: "\e879";
+        font-family: 'Linearicons-Free';
+        font-size: 18px;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    &:hover {
+        &:after {
+            color: $orange;
+        }
+    }
+}
+
+#{$ltr} .newsletter-button {
+    left: auto;
+    right: 21px;
+
+    &:after {
+        content: "\e87a";
+    }
+}

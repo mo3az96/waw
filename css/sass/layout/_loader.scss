@@ -1,0 +1,128 @@
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cssload-loader {
+    position: relative;
+    width: 29px;
+    height: 29px;
+
+    border-radius: 29px;
+    background-color: $red;
+    transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    animation: cssload-loader 1.15s ease-in-out infinite;
+    -o-animation: cssload-loader 1.15s ease-in-out infinite;
+    -ms-animation: cssload-loader 1.15s ease-in-out infinite;
+    -webkit-animation: cssload-loader 1.15s ease-in-out infinite;
+    -moz-animation: cssload-loader 1.15s ease-in-out infinite;
+}
+
+.cssload-loader:before {
+    content: "";
+    position: absolute;
+    background-color: $main;
+    top: 0px;
+    left: -40px;
+    height: 29px;
+    width: 29px;
+    border-radius: 29px;
+}
+
+.cssload-loader:after {
+    content: "";
+    position: absolute;
+    background-color: $orange;
+    top: 0px;
+    left: 40px;
+    height: 29px;
+    width: 29px;
+    border-radius: 29px;
+}
+
+
+
+
+@keyframes cssload-loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@-o-keyframes cssload-loader {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+
+    50% {
+        -o-transform: rotate(180deg);
+    }
+
+    100% {
+        -o-transform: rotate(180deg);
+    }
+}
+
+@-ms-keyframes cssload-loader {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+
+    50% {
+        -ms-transform: rotate(180deg);
+    }
+
+    100% {
+        -ms-transform: rotate(180deg);
+    }
+}
+
+@-webkit-keyframes cssload-loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(180deg);
+    }
+}
+
+@-moz-keyframes cssload-loader {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    50% {
+        -moz-transform: rotate(180deg);
+    }
+
+    100% {
+        -moz-transform: rotate(180deg);
+    }
+}

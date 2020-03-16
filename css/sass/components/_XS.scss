@@ -1,0 +1,31 @@
+.search-form {
+    @include sm {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba($text, 0.75);
+        z-index: 999;
+        display: none;
+
+        .search-cont {
+            width: 98%;
+            margin: 100px auto;
+
+            &:after {
+                right: 150px;
+            }
+        }
+
+        .search-input {
+            padding-right: 165px;
+        }
+    }
+}
+
+.nav-cont {
+    @include sm {
+        display: none;
+    }
+}

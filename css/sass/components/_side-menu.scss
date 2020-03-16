@@ -1,0 +1,35 @@
+.cats-menu {
+    position: relative;
+}
+
+.cats-btn {
+    height: 50px;
+    width: 262px;
+    background-color: $back;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #fff;
+    padding: 0 20px;
+    @include transition(all 0.3s ease-in-out);
+
+    .text {
+        font-size: 16px;
+        font-family: med;
+
+        span {
+            font-size: 18.08px;
+        }
+    }
+
+    &:after {
+        font-size: 13.98px;
+        content: "\e874";
+        font-family: 'Linearicons-Free';
+    }
+
+    &:hover {
+        color: $orange;
+    }
+}
