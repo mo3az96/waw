@@ -1,11 +1,13 @@
 .w-tabs {
     .other {
-        width: 100%;
-        position: absolute;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        overflow-x: auto;
+        @include xs {
+            width: 100%;
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow-x: auto;
+        }
     }
 }
 

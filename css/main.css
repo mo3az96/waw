@@ -797,13 +797,15 @@ html[dir=ltr] .elec-cont .product .pro-info .pro-name {
   }
 }
 
-.w-tabs .other {
-  width: 100%;
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow-x: auto;
+@media (max-width: 767px) {
+  .w-tabs .other {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-x: auto;
+  }
 }
 
 .other .nav-tabs {
