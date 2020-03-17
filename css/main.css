@@ -1770,7 +1770,7 @@ html[dir=ltr] .lang .lang-dropdown:before {
   .lang .lang-dropdown {
     left: auto;
     right: -6px;
-    transform: translateX(0);
+    transform: none;
     top: 27px;
     z-index: 99999;
   }
