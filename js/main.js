@@ -344,36 +344,35 @@ $(document).ready(function () {
         /////////////////////////////////////////////////
         $('.mo-search-icon').click(function () {
             $(".search-form").fadeIn(500);
+            $(".search-menu-overlay").fadeIn(500);
             $("body").addClass("overflow");
             $('.search-input').focus();
         });
-        $('.search-form').click(function () {
+        $('.search-menu-overlay').click(function () {
             $("body").removeClass("overflow");
             $(".search-form").fadeOut(500);
+            $(".search-menu-overlay").fadeOut(500);
             $('.search-input').focusout();
-        });
-        $('.search-cont').click(function (e) {
-            e.stopPropagation();
         });
         /////////////////////////////////////////////////////
         $('.mo-menu-icon').click(function () {
             $(".nav-cont").fadeIn(400);
+            $(".search-menu-overlay").fadeIn(400);
             $("nav").addClass("nav-in");
-            $("body").toggleClass("overflow");
+            $("body").addClass("overflow");
             $('.lang').addClass("lang-in");
         });
 
-        // $('.nav-cont').click(function () {
-        //     $(".nav-cont").fadeOut(400);
-        //     $("nav").removeClass("nav-in");
-        //     $(".lang").removeClass("lang-in");
-        //     $("body").toggleClass("overflow");
-        // });
-        // $('nav').click(function (e) {
-        //     e.stopPropagation();
-        // });
+        $('.search-menu-overlay').click(function () {
+            $(".nav-cont").fadeOut(400);
+            $(".search-menu-overlay").fadeOut(400);
+            $("nav").removeClass("nav-in");
+            $(".lang").removeClass("lang-in");
+            $("body").removeClass("overflow");
+        });
         $('.close-btn').click(function () {
             $(".nav-cont").fadeOut(400);
+            $(".search-menu-overlay").fadeOut(400);
             $("nav").removeClass("nav-in");
             $("body").toggleClass("overflow");
             $(".lang").removeClass("lang-in");
@@ -403,7 +402,4 @@ $(document).ready(function () {
         $(".mo-accordion").not(this).siblings().css('max-height', '0');
         $(".mo-accordion").not(this).siblings().css('padding-top', "0");
     });
-
-
-
 });
