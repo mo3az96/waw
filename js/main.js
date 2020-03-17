@@ -189,8 +189,8 @@ $(document).ready(function () {
         observer: true,
         observeParents: true,
         navigation: {
-            nextEl: '#spsectyat1 .swiper-button-next',
-            prevEl: '#spsectyat1 .swiper-button-prev',
+            nextEl: '#secty-cat1 .swiper-button-next',
+            prevEl: '#secty-cat1 .swiper-button-prev',
         },
         breakpoints: {
             500: {
