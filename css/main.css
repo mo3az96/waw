@@ -457,9 +457,16 @@ html[dir=ltr] .cats-menu {
 .cats-btn .text {
   font-size: 16px;
   font-family: med;
+  display: flex;
+  align-items: center;
 }
 .cats-btn .text span {
   font-size: 18.08px;
+  margin-left: 10px;
+}
+html[dir=ltr] .cats-btn .text span {
+  margin-right: 10px;
+  margin-left: 0;
 }
 .cats-btn:after {
   font-size: 13.98px;
@@ -1209,6 +1216,7 @@ html[dir=ltr] .sliders .arrows {
   font-size: 15px;
   color: #444444;
   height: 42px;
+  overflow: hidden;
   display: block;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -1388,6 +1396,7 @@ h4[class^=mo-accordion-].nav-foot-header {
   border: none;
   display: flex;
   align-items: center;
+  margin-left: 75px;
 }
 html[dir=ltr] .other .nav-tabs {
   margin-right: 75px;
@@ -1897,6 +1906,10 @@ html[dir=ltr] .mo-user-nav .user-anchor .mo-text {
   color: #fff;
   font-size: 12px;
   font-family: med;
+}
+html[dir=ltr] .mo-user-nav .user-anchor .items {
+  left: 10px;
+  right: auto;
 }
 .mo-user-nav .user-anchor:hover {
   color: #eb1e30;

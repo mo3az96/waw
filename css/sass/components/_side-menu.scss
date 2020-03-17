@@ -23,9 +23,17 @@
     .text {
         font-size: 16px;
         font-family: med;
+        display: flex;
+        align-items: center;
 
         span {
             font-size: 18.08px;
+            margin-left: 10px;
+
+            #{$ltr} & {
+                margin-right: 10px;
+                margin-left: 0;
+            }
         }
     }
 

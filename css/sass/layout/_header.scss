@@ -377,6 +377,11 @@
             color: #fff;
             font-size: 12px;
             font-family: med;
+
+            #{$ltr} & {
+                left: 10px;
+                right: auto;
+            }
         }
 
         &:hover {
