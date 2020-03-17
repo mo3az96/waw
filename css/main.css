@@ -1444,6 +1444,9 @@ html[dir=ltr] .mo-user-nav .user-anchor .mo-text {
   width: 14px;
   height: 14px;
   line-height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #eb1e30;
   text-align: center;
   border-radius: 50%;
@@ -1945,7 +1948,7 @@ html[dir=ltr] .banner:nth-of-type(3) {
 }
 @media (max-width: 992px) {
   .feat .feat-img {
-    margin: 0;
+    margin: 0 0 10px;
   }
 }
 .feat .feat-name {

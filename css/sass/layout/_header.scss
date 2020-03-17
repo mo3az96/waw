@@ -352,6 +352,9 @@
             width: 14px;
             height: 14px;
             line-height: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: $red;
             text-align: center;
             border-radius: 50%;
