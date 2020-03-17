@@ -332,9 +332,15 @@ $(document).ready(function () {
     });
 
 
-    if ($(window).width() <= 767) {
+    if ($(window).width() <= 991) {
         $(".nav-foot-header").addClass("mo-accordion");
         $(".nav-foot").addClass("mo-panel");
+        // $(".mega-link .nav-anchor").attr("href", "#collapseOne");
+        $(".mega-ul").addClass("collapse");
+        $(".mega-link .mega-div").addClass("collapse");
+        $(".mega-link .mega-div").removeClass("mega-div");
+        $(".mega-link").addClass("panel");
+        $(".mega").addClass("panel");
         /////////////////////////////////////////////////
         $('.mo-search-icon').click(function () {
             $(".search-form").fadeIn(500);
@@ -357,23 +363,30 @@ $(document).ready(function () {
             $('.lang').addClass("lang-in");
         });
 
-        $('.nav-cont').click(function () {
-            $(".nav-cont").fadeOut(400);
-            $("nav").removeClass("nav-in");
-            $(".lang").removeClass("lang-in");
-            $("body").toggleClass("overflow");
-        });
-        $('nav').click(function (e) {
-            e.stopPropagation();
-        });
+        // $('.nav-cont').click(function () {
+        //     $(".nav-cont").fadeOut(400);
+        //     $("nav").removeClass("nav-in");
+        //     $(".lang").removeClass("lang-in");
+        //     $("body").toggleClass("overflow");
+        // });
+        // $('nav').click(function (e) {
+        //     e.stopPropagation();
+        // });
         $('.close-btn').click(function () {
             $(".nav-cont").fadeOut(400);
             $("nav").removeClass("nav-in");
             $("body").toggleClass("overflow");
             $(".lang").removeClass("lang-in");
         });
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        $('[data-parent="#collapseOne"]').click(function () {
+            $('.mega-ul.collapse.in').collapse('hide');
+        });
     }
-
+    if ($(window).width() > 991) {
+        $(".mega-link .nav-anchor").attr("href", "");
+        $(".mega-head").attr("href", "");
+    }
 
     $('.mo-accordion').click(function () {
         var x = $(this).siblings().prop('scrollHeight') + 12 + "px";
@@ -390,4 +403,7 @@ $(document).ready(function () {
         $(".mo-accordion").not(this).siblings().css('max-height', '0');
         $(".mo-accordion").not(this).siblings().css('padding-top', "0");
     });
+
+
+
 });

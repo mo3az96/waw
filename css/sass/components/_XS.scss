@@ -1,5 +1,10 @@
 .contact-info-xs {
     display: none;
+
+    @include xs {
+        display: block;
+        margin-top: 25px;
+    }
 }
 
 .close-btn {
@@ -26,6 +31,7 @@
         .search-cont {
             width: 98%;
             margin: 100px auto;
+            max-width: 500px;
 
             &:after {
                 right: 150px;
@@ -110,10 +116,7 @@
             }
         }
 
-        .contact-info-xs {
-            display: block;
-            margin-top: 25px;
-        }
+
 
         .contact-link {
             justify-content: center;

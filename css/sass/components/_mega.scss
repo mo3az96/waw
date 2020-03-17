@@ -1,5 +1,4 @@
 .mega-link {
-    position: relative;
 
     .nav-anchor {
         &:after {
@@ -21,4 +20,146 @@
         }
     }
 
+    &:hover {
+        .nav-anchor {
+            color: $orange;
+        }
+
+        .mega-div {
+            visibility: visible;
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+}
+
+.mega-div {
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    z-index: 15;
+    width: 100%;
+    right: 0;
+    left: 0;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px 50px;
+    display: flex;
+    transform-origin: top;
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
+    @include transition(all 0.3s ease-in-out);
+}
+
+.mega {
+    width: 20%;
+}
+
+.mega-head {
+    font-size: 17px;
+    color: $main;
+    font-family: med;
+    margin-bottom: 12px;
+    cursor: default;
+
+    &:hover {
+        color: $main;
+    }
+
+    &:focus {
+        color: $main;
+    }
+}
+
+.mega-img {
+    margin-bottom: 22px;
+}
+
+.mega-ul {
+    li {
+        margin: 4px 0;
+        margin-left: 8px;
+
+        a {
+            font-size: 14px;
+            @include transition(all 0.3s ease-in-out);
+            color: $text;
+
+            &:hover {
+                color: $red;
+            }
+
+            &.more {
+                color: $more;
+                font-size: 13px;
+                text-decoration: underline;
+                @include transition(all 0.3s ease-in-out);
+
+                &:hover {
+                    color: $main;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@include sm {
+    .mega-div-xs {
+        padding: 0 15px;
+    }
+
+    .mega {
+        width: 100%;
+        margin: 5px 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .mega-head {
+        font-family: tajwal;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+
+        &.panel-heading {
+            &:after {
+                content: "\e874";
+                font-family: 'Linearicons-Free';
+                font-size: 11px;
+            }
+        }
+
+    }
+
+    .mega-img {
+        display: none;
+    }
+
+    .mega-ul {
+        padding: 0 15px;
+
+        li {
+            a {
+                font-size: 16px;
+
+                &.more {
+                    font-size: 15px;
+                }
+            }
+        }
+
+
+    }
+}
+
+.panel {
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
