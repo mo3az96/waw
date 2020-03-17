@@ -384,6 +384,29 @@ $(document).ready(function () {
         $('.search-cont').click(function (e) {
             e.stopPropagation();
         });
+        /////////////////////////////////////////////////////
+        $('.mo-menu-icon').click(function () {
+            $(".nav-cont").fadeIn(400);
+            $("nav").addClass("nav-in");
+            $("body").toggleClass("overflow");
+            $('.lang').addClass("lang-in");
+        });
+
+        $('.nav-cont').click(function () {
+            $(".nav-cont").fadeOut(400);
+            $("nav").removeClass("nav-in");
+            $(".lang").removeClass("lang-in");
+            $("body").toggleClass("overflow");
+        });
+        $('nav').click(function (e) {
+            e.stopPropagation();
+        });
+        $('.close-btn').click(function () {
+            $(".nav-cont").fadeOut(400);
+            $("nav").removeClass("nav-in");
+            $("body").toggleClass("overflow");
+            $(".lang").removeClass("lang-in");
+        });
     }
 
 
