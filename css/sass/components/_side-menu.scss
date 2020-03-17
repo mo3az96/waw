@@ -37,4 +37,213 @@
     &:hover {
         color: $orange;
     }
+
+    &.open {
+        background-color: $orange;
+        color: #fff;
+
+        &:after {
+            content: "\e873";
+        }
+    }
+}
+
+.cats-dispaly {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 999;
+    width: 262px;
+    display: none;
+    // overflow: hidden;
+}
+
+.cats-div {
+
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 15px 17px;
+
+    li {
+        margin-bottom: 15px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+
+            @include sm {
+                margin: 5px 0;
+            }
+        }
+
+        @include sm {
+            margin: 5px 0;
+        }
+    }
+
+    @include sm {
+        box-shadow: none;
+        padding: 0 15px;
+    }
+}
+
+.cat-link {
+    font-size: 16px;
+    font-family: med;
+    color: $text;
+    display: flex;
+    align-items: center;
+    @include transition(all 0.3s ease-in-out);
+
+    i {
+        color: $arrow;
+        @include transition(all 0.3s ease-in-out);
+        width: 18px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    &:hover {
+        color: $red;
+
+        i {
+            color: $red;
+        }
+    }
+
+    @include sm {
+        font-family: tajwal;
+        font-size: 17px;
+        color: $main;
+    }
+}
+
+.level-2 {
+
+    >.cat-link {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 13.98px;
+            content: "\e875";
+            font-family: 'Linearicons-Free';
+            color: $arrow;
+            @include transition(all 0.3s ease-in-out);
+
+            @include sm {
+                font-size: 11px;
+                content: "\e874";
+            }
+        }
+    }
+
+    &:hover {
+        >.cat-link {
+            color: $red;
+
+            i {
+                color: $red;
+            }
+
+            &:after {
+                color: $red;
+            }
+        }
+
+        .level-2-menu {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.level-3 {
+
+    >.cat-link {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 13.98px;
+            content: "\e875";
+            font-family: 'Linearicons-Free';
+            color: $arrow;
+            @include transition(all 0.3s ease-in-out);
+
+            @include sm {
+                font-size: 11px;
+                content: "\e874";
+            }
+        }
+    }
+
+    &:hover {
+        >.cat-link {
+            color: $red;
+
+            i {
+                color: $red;
+            }
+
+            &:after {
+                color: $red;
+            }
+        }
+
+        .level-3-menu {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.level-2-menu {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(all 0.3s ease-in-out);
+
+    @include sm {
+        padding: 0 15px;
+    }
+
+
+    @include sm {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    li {
+        @include sm {
+            margin: 4px 0;
+        }
+    }
+
+    .cat-link {
+        font-family: tajawal;
+        font-size: 15px;
+
+        @include sm {
+            font-size: 15px;
+            color: #444444;
+        }
+    }
+
 }

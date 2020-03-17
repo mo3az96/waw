@@ -23,6 +23,10 @@
     &:hover {
         .nav-anchor {
             color: $orange;
+
+            @include sm {
+                color: $main;
+            }
         }
 
         .mega-div {
@@ -49,6 +53,7 @@
     visibility: hidden;
     opacity: 0;
     @include transition(all 0.3s ease-in-out);
+    z-index: 999;
 }
 
 .mega {
