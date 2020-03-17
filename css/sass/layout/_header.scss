@@ -3,6 +3,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 5px 0;
+
+    @include xs {
+        padding: 0;
+    }
 }
 
 .contact-info {
@@ -260,7 +264,7 @@
 
     @include sm {
         align-items: center;
-        padding: 15px 0;
+        padding: 10px 0;
     }
 }
 
@@ -347,12 +351,9 @@
             position: absolute;
             width: 14px;
             height: 14px;
-            padding: 3px 0;
             line-height: 14px;
             background-color: $red;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            text-align: center;
             border-radius: 50%;
             color: #fff;
             font-size: 12px;

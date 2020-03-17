@@ -435,8 +435,34 @@ nav {
   content: "";
   font-family: "Linearicons-Free";
 }
+@media (max-width: 992px) {
+  .cats-btn:after {
+    font-size: 11px;
+  }
+}
 .cats-btn:hover {
   color: #f89425;
+}
+
+.mega-link {
+  position: relative;
+}
+.mega-link .nav-anchor:after {
+  font-size: 11px;
+  content: "";
+  font-family: "Linearicons-Free";
+  margin-right: 4px;
+}
+@media (max-width: 992px) {
+  .mega-link .nav-anchor {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mega-link .nav-anchor::after {
+    color: #7b2a86;
+  }
 }
 
 .contact-info-xs {
@@ -1087,6 +1113,11 @@ html[dir=ltr] .elec-cont .product .pro-info .pro-name {
   justify-content: space-between;
   padding: 5px 0;
 }
+@media (max-width: 767px) {
+  .top-links {
+    padding: 0;
+  }
+}
 
 .contact-info {
   display: flex;
@@ -1325,7 +1356,7 @@ html[dir=ltr] .lang .lang-dropdown:before {
 @media (max-width: 992px) {
   .header {
     align-items: center;
-    padding: 15px 0;
+    padding: 10px 0;
   }
 }
 
@@ -1412,12 +1443,9 @@ html[dir=ltr] .mo-user-nav .user-anchor .mo-text {
   position: absolute;
   width: 14px;
   height: 14px;
-  padding: 3px 0;
   line-height: 14px;
   background-color: #eb1e30;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   border-radius: 50%;
   color: #fff;
   font-size: 12px;

@@ -28,6 +28,10 @@
         font-size: 13.98px;
         content: "\e874";
         font-family: 'Linearicons-Free';
+
+        @include sm {
+            font-size: 11px;
+        }
     }
 
     &:hover {
