@@ -126,6 +126,7 @@
 .lang {
     margin-right: 25px;
     position: relative;
+    backface-visibility: hidden;
 
     #{$ltr} & {
         margin-right: 0;
@@ -175,9 +176,14 @@
         position: absolute;
         width: 121px;
         height: auto;
-        left: 50%;
-        top: 100%;
-        transform: translateX(-50%) translateY(6%);
+        left: -25%;
+        top: 115%;
+
+        #{$ltr} & {
+            right: -25%;
+            left: auto;
+        }
+
         z-index: 10;
         background-color: #fff;
         border-radius: 10px;
@@ -191,6 +197,7 @@
         justify-content: center;
         flex-direction: column;
         @include transition(all 0.3s ease-in-out);
+        backface-visibility: hidden;
 
         &:before {
             content: "";
@@ -228,7 +235,7 @@
 
         @include xs {
             left: auto;
-            right: -13px;
+            right: -6px;
             transform: translateX(0);
             top: 27px;
             z-index: 99999;
@@ -244,7 +251,7 @@
 
             #{$ltr} & {
                 right: auto;
-                left: -13px;
+                left: -6px;
             }
         }
     }
@@ -418,6 +425,13 @@
         }
     }
 
+    .mo-wishlist-icon,
+    .user-anchor-div {
+        @include sm {
+            display: none;
+        }
+    }
+
     .mo-search-icon {
         display: none;
 
@@ -509,6 +523,24 @@
 
         &:hover {
             color: $orange;
+        }
+    }
+}
+
+.user-nav-bar {
+    display: none;
+
+    @include sm {
+        display: block;
+
+        ul {
+            padding: 0 15px;
+
+            a {
+                font-family: tajwal;
+                font-size: 17px;
+                color: #7b2a86;
+            }
         }
     }
 }

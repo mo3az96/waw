@@ -107,10 +107,14 @@
         .nav-li {
             margin: 7px 0;
             width: 100%;
-            order: 3;
+            order: 4;
 
             &:nth-of-type(2) {
                 order: 1;
+            }
+
+            &:nth-of-type(3) {
+                order: 2;
             }
 
             &.contact-info-xs {
@@ -129,7 +133,7 @@
         }
 
         .cats-menu {
-            order: 2;
+            order: 3;
             margin: 7px 0;
             width: 100%;
         }
