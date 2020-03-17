@@ -83,6 +83,11 @@
         top: 16px;
         left: 17px;
 
+        #{$ltr} & {
+            left: auto;
+            right: 17px;
+        }
+
         .swiper-btn {
             background: none;
             background-color: $arrow-back;

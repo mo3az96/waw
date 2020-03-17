@@ -53,6 +53,11 @@
         margin: 3px 0;
         margin-left: 8px;
 
+        #{$ltr} & {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
         a {
             font-size: 14px;
             @include transition(all 0.3s ease-in-out);
@@ -122,6 +127,10 @@
 .arrows {
     position: relative;
     display: flex;
+
+    #{$ltr} & {
+        flex-direction: row-reverse;
+    }
 }
 
 .swiper-btn {
@@ -360,6 +369,11 @@
         align-items: center;
         justify-content: center;
         margin-left: 12px;
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 12px;
+        }
 
         @include sm {
             margin: 0 0 10px;

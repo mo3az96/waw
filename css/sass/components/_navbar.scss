@@ -23,6 +23,18 @@ nav {
     @include sm {
         height: auto;
         display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #{$ltr} & {
+        margin-left: 22px;
+        margin-right: 0;
+
+        @include sm {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 }
 

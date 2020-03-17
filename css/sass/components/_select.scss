@@ -8,6 +8,11 @@
                 height: 50px;
                 width: 232px;
 
+                #{$ltr} & {
+                    right: auto;
+                    left: 0;
+                }
+
                 @include sm {
                     width: 150px;
                 }

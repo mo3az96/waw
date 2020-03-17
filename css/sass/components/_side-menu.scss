@@ -1,6 +1,11 @@
 .cats-menu {
     position: relative;
     margin-left: 10px;
+
+    #{$ltr} & {
+        margin-left: 0;
+        margin-right: 10px;
+    }
 }
 
 .cats-btn {
@@ -108,6 +113,11 @@
         @include sm {
             display: none;
         }
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 10px;
+        }
     }
 
     &:hover {
@@ -141,9 +151,19 @@
             color: $arrow;
             @include transition(all 0.3s ease-in-out);
 
+            #{$ltr} & {
+                content: "\e876";
+                left: auto;
+                right: 0;
+            }
+
             @include sm {
                 font-size: 11px;
                 content: "\e874";
+
+                #{$ltr} & {
+                    content: "\e874";
+                }
             }
         }
     }
@@ -188,6 +208,11 @@
                 font-size: 11px;
                 content: "\e874";
             }
+
+            #{$ltr} & {
+                right: auto;
+                left: 100%;
+            }
         }
     }
 
@@ -218,6 +243,11 @@
     visibility: hidden;
     opacity: 0;
     @include transition(all 0.3s ease-in-out);
+
+    #{$ltr} & {
+        right: auto;
+        left: 100%;
+    }
 
     @include sm {
         padding: 0 15px;

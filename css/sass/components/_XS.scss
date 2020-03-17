@@ -10,6 +10,11 @@
     z-index: 999;
     display: none;
     position: absolute;
+
+    #{$ltr} & {
+        left: auto;
+        right: 22px;
+    }
 }
 
 .search-form {
@@ -29,11 +34,21 @@
 
             &:after {
                 right: 150px;
+
+                #{$ltr} & {
+                    left: 150px;
+                    right: auto;
+                }
             }
         }
 
         .search-input {
             padding-right: 165px;
+
+            #{$ltr} & {
+                padding-left: 165px;
+                padding-right: 0;
+            }
         }
     }
 }
@@ -49,6 +64,11 @@
         z-index: 999;
         display: none;
 
+        #{$ltr} & {
+            left: 0;
+            right: auto;
+        }
+
         nav {
             position: fixed;
             top: 0;
@@ -63,6 +83,12 @@
             transform: scaleX(0);
             transform-origin: right;
             @include transition(all 0.4s ease-in-out);
+
+            #{$ltr} & {
+                left: 0;
+                right: auto;
+                transform-origin: left;
+            }
 
             &.nav-in {
                 transform: scaleX(1);
@@ -151,15 +177,16 @@
             transform: scaleX(0);
             transform-origin: right;
             @include transition(all 0.4s ease-in-out);
-            z-index: 12;
+            z-index: 99999;
             right: 25px;
             top: 22px;
             position: fixed;
 
             #{$ltr} & {
-                left: 10px;
+                left: 25px;
                 right: auto;
                 transform-origin: left;
+                margin: 0;
             }
 
             &.lang-in {
